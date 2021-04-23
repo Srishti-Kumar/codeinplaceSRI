@@ -1,0 +1,30 @@
+""" 
+  loops : for----->while---->if---->if/else====>>CONTROL FLOW
+1. FOR
+we know how many times in advance the loops will goon {DEFINITE LOOP}
+   def turn_right():
+     for i in range(3):
+       turn_left()
+
+       post con.dition of loop to match the precondition is one of the main things
+
+2. WHILE
+we dont know how many times the loops will continue {INDEFINITE LOOP}
+
+  while COnDITION: {this condition can be true or false,if T then loop executes otherwise wont }
+def move_to_wall:
+  while front_is_clear():
+    put_beeper()
+    move()
+  put_beeper()
+
+OFF BY ONE ERROR
+
+if/else
+
+def invert_beepers():
+  if beepers_present():
+    pick_beeper()
+  else:
+    put_beeper()
+"""
