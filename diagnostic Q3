@@ -1,0 +1,98 @@
+"""
+Write a program that has Karel draw four small "waves". Each wave is a triangle made up of three beepers. There is a gap between each wave. 
+When karel is done the world should look like this:
+
+Concepts:
+This problem reviews basic control flow with Karel. It was much easier to solve if you defined a make_wave() function. 
+It also introduces a fence-post problem where you need to move between waves three times, but you need to draw four waves.
+Chapters: Decomposition Chapter and the Fencepost bug part of the While loop chapter.
+
+"""
+
+"""
+There are many solutions to this problem. Here are a few
+"""
+
+# Example Solution 1
+def main():
+   # make the first three waves
+   for i in range(3):
+      build_wave()
+      # you need to move twice to go between waves
+      move()
+      move()
+   # because of the fencepost bug, we need a fourth wave
+   build_wave()
+
+def build_wave():
+   put_beeper()
+   move()
+   put_beeper()
+   turn_left()
+   move()
+   put_beeper()
+   turn_around()
+   move()
+   turn_left()
+   
+   
+# Example Solution 2
+def main():
+   # you can also solve this problem with a while loop
+   while front_is_clear():
+      build_wave()
+      # you might be facing a wall at this point!
+      if front_is_clear():
+         move()
+         move()
+         
+def build_wave():
+   # same as in solution 1
+   
+  
+  
+  
+  
+  
+  #Your Solution
+from karel.stanfordkarel import *
+
+def main():
+    # TODO write your solution here
+    one_wave():
+    move_twice()
+    one_wave():
+    move_twice()
+    one_wave():
+    move_twice()
+    one_wave():
+
+def one_wave():
+    put_beeper()
+    move()
+    put_beeper()
+    turn_left()
+    move()
+    put_beeper()
+    turn_around()
+    move()
+    turn_left()
+
+
+
+# There is no need to edit code beyond this point
+def move_twice():
+    move()
+    move()
+
+def turn_right():
+    for i in range(3):
+        turn_left()
+
+def turn_around():
+    for i in range(2):
+        turn_left()
+
+
+if __name__ == "__main__":
+    run_karel_program()
