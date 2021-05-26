@@ -1,0 +1,43 @@
+"""
+Write a program which asks the user for their height in meters and prints whether or not they are the correct height to be a NASA astronaut.
+If their height is between 1.6 meters and 1.9 meters, print "Correct height to be an astronaut". 
+If their height is less than 1.6 meters, print "Below minimum astronaut height". If their height is greater than 1.9 meters,
+print "Above maximum astronaut height".
+
+Concepts:
+The objective of this problem was to check your ability to do a two main things
+Get input from a user, change its type to a float, and store it in a variable.
+Use conditional statements (if, else and elif) as well as boolean operators.
+You can read the Input Chapter, Booleans Chapter and If Chapter statements if you found this question hard!
+
+
+"""
+
+"""
+There are many solutions to this problem. Here are a few
+"""
+
+# Example Solution 1
+def main():
+   # get the user height, cast it to a float, save as a variable
+   user_height = float(input('Enter your height in meters: '))
+   # first rule out that they are too short
+   if user_height < 1.6:
+      print('Below minimum astronaut height')
+   # then rule out that they are too tall
+   elif user_height > 1.9:
+      print('Above maximum astronaut height')
+   # at this point you know they are the correct height
+   else:
+      print('Correct height to be an astronaut')
+
+
+# Example Solution 2
+def main():
+   user_height = float(input('Enter you height in meters: '))
+   if user_height >= 1.6 and user_height <= 1.9:
+      print('Correct height to be an astronaut')
+   elif user_height < 1.6:
+      print('Below minimum astronaut height')
+   else:
+      print('Above maximum astronaut height')
